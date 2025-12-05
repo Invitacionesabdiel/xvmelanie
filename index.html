@@ -3,56 +3,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Invitación XV años - Melanie</title>
 
+  <!-- Nuevas fuentes elegantes y totalmente compatibles -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
-    /* Fuentes elegantes y compatibles */
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+    :root{
+      --red:#c21807;
+      --dark:#0b0b0b;
+      --muted:#222;
+      --paper:#111;
+      --accent:#ffdede;
+    }
 
-    body {
-      margin: 0;
-      padding: 0;
+    html,body{
+      height:100%;
+      margin:0;
+      background:linear-gradient(180deg,var(--dark) 0%, #070707 100%);
+      color:#fff;
       font-family: 'Montserrat', sans-serif;
-      background-color: #0b0b0b;
-      color: white;
-      text-align: center;
     }
 
-    h1, h2, h3, .titulo, .nombre {
-      font-family: 'Playfair Display', serif !important;
-      letter-spacing: 0.5px;
+    /* Tarjeta principal */
+    .card{
+      max-width:900px;
+      margin:30px auto;
+      background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.7));
+      border-radius:18px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
+      overflow:hidden;
+      display:flex;
     }
 
-    .contenedor {
-      width: 100%;
-      max-width: 480px;
-      margin: auto;
-      padding: 20px;
+    /* Columna izquierda */
+    .left{
+      flex:1.1;
+      padding:36px 28px;
+      background: linear-gradient(135deg,var(--paper), #1a0d0d);
+      position:relative;
     }
 
-    img.portada {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 20px;
+    /* Columna derecha (monograma) */
+    .right{
+      flex:.9;
+      padding:28px 20px;
+      background:linear-gradient(180deg, rgba(194,24,7,0.06), rgba(0,0,0,0.12));
+      display:flex;align-items:center;justify-content:center;flex-direction:column;
     }
 
-    .seccion {
-      margin-top: 25px;
+    h1{
+      font-size:36px;
+      margin:4px 0;
+      color:var(--red);
+      font-family:'Playfair Display', serif;
     }
 
-    .map-container iframe {
-      width: 100%;
-      height: 230px;
-      border: 0;
-      border-radius: 10px;
-      margin-top: 12px;
+    h2{
+      font-size:40px;
+      margin:6px 0 12px;
+      color:#fff;
+      font-family:'Playfair Display', serif;
+      text-align:center;
     }
 
-    /* Mariposas flotantes a las orillas */
+    p.lead{
+      color:#f6f0f0;
+      opacity:0.95;
+      margin:10px 0 22px;
+      font-size:18px;
+    }
+
+    .name{
+      font-family:'Playfair Display', serif;
+      font-weight:600;
+      color:#fff;
+      letter-spacing:2px;
+      font-size:80px;
+      text-align:center;
+    }
+
+    .date{
+      display:inline-block;
+      background:rgba(0,0,0,0.45);
+      padding:10px 14px;
+      border-radius:10px;
+      margin-top:10px;
+      font-size:18px;
+    }
+
+    .info{
+      background:rgba(0,0,0,0.25);
+      padding:16px;
+      border-radius:10px;
+      margin-top:20px;
+      font-size:18px;
+    }
+
+    .muted{
+      color:#ccc;
+      font-size:16px;
+    }
+
+    .location{
+      margin-top:18px;
+      padding:12px;
+      border:2px dashed rgba(194,24,7,0.25);
+      border-radius:8px;
+      color:#ffecec;
+      background:linear-gradient(0deg, rgba(194,24,7,0.03), rgba(0,0,0,0.02));
+      min-height:46px;
+      font-size:18px;
+    }
+
+    .map-container{
+      margin-top:14px;
+    }
+
+    .footer-meta{
+      margin-top:20px;
+      font-size:18px;
+      line-height:1.4;
+    }
+
+    .parents, .padrinos{
+      margin-top:12px;
+      font-family:'Playfair Display', serif;
+      font-size:30px;
+      letter-spacing:1px;
+    }
+
+    .cta{
+      margin-top:28px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      background:var(--red);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+      font-size:18px;
+    }
+
+    .ornament .circle{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:radial-gradient(circle at 30% 30%, rgba(194,24,7,0.35), rgba(0,0,0,0.45));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .ornament .monogram{
+      font-family:'Playfair Display', serif;
+      font-size:70px;
+      color:#fff;
+      margin-right:17px;
+      margin-top:10px;
+    }
+
+    .small{
+      font-size:16px;
+      color:#ddd;
+    }
+
+    /* 🦋 Mariposas flotantes en las orillas */
     .butterfly {
       position: fixed;
-      width: 80px;
-      height: auto;
+      width: 85px;
       z-index: 9999;
       animation: float 12s ease-in-out infinite;
       pointer-events: none;
@@ -61,59 +188,105 @@
 
     @keyframes float {
       0% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-40px) rotate(8deg); }
+      50% { transform: translateY(-40px) rotate(6deg); }
       100% { transform: translateY(0px) rotate(0deg); }
     }
+
+    /* 📱 ADAPTADO A CELULAR */
+    @media (max-width: 800px){
+
+      .card{
+        flex-direction:column;
+        margin:15px;
+      }
+
+      .left, .right{
+        padding:20px;
+      }
+
+      h1{ font-size:30px; }
+      h2{ font-size:34px; }
+      .name{ font-size:70px; }
+
+      .butterfly{
+        width:65px;
+      }
+    }
+
   </style>
-
 </head>
+
+<!-- 🦋 Mariposas en los bordes (no cubren texto) -->
+<img src="1.png" class="butterfly" style="top: 20px; left: 0px; animation-delay: 0s;">
+<img src="4.png" class="butterfly" style="bottom: 20px; left: 0px; width: 95px; animation-delay: 2s;">
+<img src="4.png" class="butterfly" style="top: 40px; right: 0px; width: 90px; animation-delay: 4s;">
+<img src="1.png" class="butterfly" style="bottom: 40px; right: 0px; width: 100px; animation-delay: 6s;">
+
 <body>
+  <div class="card" role="main">
+    <div class="left">
+      <h1>Estás invitado(a)</h1>
 
-  <div class="contenedor">
+      <div class="name">Melanie</div>
 
-    <h1 class="nombre">Melanie</h1>
-    <h2 class="titulo">Mis XV Años</h2>
+      <h2>Celebrando sus XV años</h2>
 
-    <img class="portada" src="TU_IMAGEN_DE_PORTADA_AQUI.jpg" alt="Portada XV">
+      <p class="lead">
+        Acompáñanos en la fiesta en honor a Melanie. Será un día lleno de alegría, música y momentos inolvidables.
+      </p>
 
-    <div class="seccion">
-      <h2>Ceremonia</h2>
-      <p>Parroquia de ejemplo — 4:00 PM</p>
-    </div>
-
-    <div class="seccion">
-      <h2>Recepción</h2>
-      <p>Salón de eventos — 6:00 PM</p>
-    </div>
-
-    <div class="seccion">
-      <h2>Ubicación</h2>
-      <div class="map-container">
-        <!-- Mapa que NO se bloquea -->
-        <iframe
-          loading="lazy"
-          allowfullscreen
-          src="https://www.google.com/maps?q=22.2676111,-101.0598611&hl=es&z=17&output=embed">
-        </iframe>
+      <div class="date">
+        Sábado, 27 de diciembre de 2025 — 7:00 PM
       </div>
+
+      <div class="info">
+        <div class="muted">Agradeceremos su presencia en:</div>
+
+        <div class="location">
+          Av. Damian Carmona no. 34, Loc. Matancillas en Mexquitic de Carmona S.L.P.
+        </div>
+
+        <div class="footer-meta">
+          <div class="parents"><strong>Papá:</strong> Adalberto Rodriguez Rdz</div>
+          <div class="padrinos"><strong>Padrinos:</strong> Saúl Raymundo Chávez Lara y María Susana Lara</div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            width="100%"
+            height="230"
+            style="border:0;border-radius:10px;margin-top:12px;"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps?q=22.2676111,-101.0598611&hl=es&z=17&output=embed">
+          </iframe>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="https://wa.me/524443736291?text=Confirmo%20mi%20asistencia" target="_blank">
+            Confirmar asistencia
+          </a>
+
+          <a class="btn" href="https://wa.me/524443736291?text=Requiero%20informacion%20del%20transporte" target="_blank">
+            Solicitar transporte
+          </a>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:14px;opacity:0.9">
+        Se recomienda traer calzado cómodo para el baile.
+      </p>
     </div>
 
+    <aside class="right">
+      <div class="ornament">
+        <div class="circle">
+          <div class="monogram">M</div>
+        </div>
+        <div style="height:12px"></div>
+        <div class="small">27 · 12 · 2025</div>
+      </div>
+    </aside>
   </div>
-
-  <!-- Mariposas flotantes en las orillas -->
-  <img src="https://i.imgur.com/jeqJ9eR.png" class="butterfly" 
-       style="top: 20px; left: 0px; width: 85px; animation-delay: 0s;">
-
-  <img src="https://i.imgur.com/jeqJ9eR.png" class="butterfly" 
-       style="bottom: 20px; left: 0px; width: 95px; animation-delay: 2s;">
-
-  <img src="https://i.imgur.com/jeqJ9eR.png" class="butterfly" 
-       style="top: 40px; right: 0px; width: 90px; animation-delay: 4s;">
-
-  <img src="https://i.imgur.com/jeqJ9eR.png" class="butterfly" 
-       style="bottom: 40px; right: 0px; width: 100px; animation-delay: 6s;">
-
 </body>
 </html>
-
-
