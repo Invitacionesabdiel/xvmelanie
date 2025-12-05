@@ -7,7 +7,7 @@
   <title>Invitación XV años - Melanie</title>
 
   <!-- Fuentes elegantes -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -16,7 +16,6 @@
       --muted:#222;
       --paper:#111;
       --accent:#ffdede;
-      font-family: 'Cormorant Garamond', serif;
     }
 
     html,body{
@@ -24,6 +23,7 @@
       margin:0;
       background:linear-gradient(180deg,var(--dark) 0%, #070707 100%);
       color:#fff;
+      font-family: 'Montserrat', sans-serif;
     }
 
     /* Tarjeta principal */
@@ -58,14 +58,14 @@
       margin:4px 0;
       letter-spacing:1px;
       color:var(--red);
-      font-family:'Great Vibes', cursive;
+      font-family:'Playfair Display', serif;
     }
 
     h2{
       font-size:40px;
       margin:6px 0 12px;
       color:#fff;
-      font-family:'Great Vibes', cursive;
+      font-family:'Playfair Display', serif;
       text-align:center;
     }
 
@@ -77,7 +77,7 @@
     }
 
     .name{
-      font-family:'Great Vibes', cursive;
+      font-family:'Playfair Display', serif;
       font-weight:700;
       color:#fff;
       letter-spacing:3px;
@@ -130,7 +130,7 @@
 
     .parents, .padrinos{
       margin-top:12px;
-      font-family:'Great Vibes', cursive;
+      font-family:'Playfair Display', serif;
       font-size:32px;
       letter-spacing:2px;
     }
@@ -165,7 +165,7 @@
     }
 
     .ornament .monogram{
-      font-family:'Great Vibes', cursive;
+      font-family:'Playfair Display', serif;
       font-size:70px;
       color:#fff;
       margin-right:17px;
@@ -177,14 +177,13 @@
       color:#ddd;
     }
 
-    /* 🔥 Mariposas flotantes */
+    /* 🔥 Mariposas flotantes — movidas totalmente a las orillas */
     .butterfly {
       position: fixed;
-      width: 85px;
       z-index: 9999;
       animation: float 12s ease-in-out infinite;
       pointer-events: none;
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     @keyframes float {
@@ -230,20 +229,21 @@
       }
 
       .butterfly{
-        width:65px;
+        width:65px !important;
       }
     }
 
   </style>
 </head>
 
-<!-- 🦋 Mariposas -->
-<img src="1.png" class="butterfly" style="top: 40px; left: 20px; animation-delay: 0s;">
-<img src="4.png" class="butterfly" style="top: 120px; right: 40px; width: 110px; animation-delay: 2s;">
-<img src="4.png" class="butterfly" style="bottom: 60px; left: 120px; width: 80px; animation-delay: 4s;">
-<img src="1.png" class="butterfly" style="bottom: 160px; right: 100px; width: 100px; animation-delay: 6s;">
-
 <body>
+
+<!-- 🦋 Mariposas colocadas SOLO en las orillas -->
+<img src="1.png" class="butterfly" style="top: 20px; left: 10px; width:80px; animation-delay: 0s;">
+<img src="4.png" class="butterfly" style="top: 40px; right: 10px; width:90px; animation-delay: 2s;">
+<img src="4.png" class="butterfly" style="bottom: 20px; left: 10px; width:70px; animation-delay: 4s;">
+<img src="1.png" class="butterfly" style="bottom: 20px; right: 10px; width:85px; animation-delay: 6s;">
+
   <div class="card" role="main">
     <div class="left">
       <h1>Estás invitado(a)</h1>
@@ -311,4 +311,3 @@
   </div>
 </body>
 </html>
-
