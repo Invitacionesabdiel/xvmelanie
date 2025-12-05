@@ -6,7 +6,7 @@
 
   <title>Invitación XV años - Melanie</title>
 
-  <!-- Nuevas fuentes elegantes y totalmente compatibles -->
+  <!-- 🔥 Fuentes compatibles con Chrome móvil -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -23,7 +23,12 @@
       margin:0;
       background:linear-gradient(180deg,var(--dark) 0%, #070707 100%);
       color:#fff;
-      font-family: 'Montserrat', sans-serif;
+      font-family:'Montserrat', sans-serif;
+    }
+
+    /* TÍTULOS con Playfair Display */
+    h1,h2,.name,.parents,.padrinos,.monogram{
+      font-family:'Playfair Display', serif !important;
     }
 
     /* Tarjeta principal */
@@ -56,15 +61,14 @@
     h1{
       font-size:36px;
       margin:4px 0;
+      letter-spacing:1px;
       color:var(--red);
-      font-family:'Playfair Display', serif;
     }
 
     h2{
       font-size:40px;
       margin:6px 0 12px;
       color:#fff;
-      font-family:'Playfair Display', serif;
       text-align:center;
     }
 
@@ -76,11 +80,10 @@
     }
 
     .name{
-      font-family:'Playfair Display', serif;
-      font-weight:600;
+      font-weight:700;
       color:#fff;
-      letter-spacing:2px;
-      font-size:80px;
+      letter-spacing:3px;
+      font-size:90px;
       text-align:center;
     }
 
@@ -129,9 +132,8 @@
 
     .parents, .padrinos{
       margin-top:12px;
-      font-family:'Playfair Display', serif;
-      font-size:30px;
-      letter-spacing:1px;
+      font-size:32px;
+      letter-spacing:2px;
     }
 
     .cta{
@@ -164,7 +166,6 @@
     }
 
     .ornament .monogram{
-      font-family:'Playfair Display', serif;
       font-size:70px;
       color:#fff;
       margin-right:17px;
@@ -176,7 +177,7 @@
       color:#ddd;
     }
 
-    /* 🦋 Mariposas flotantes en las orillas */
+    /* Mariposas flotantes */
     .butterfly {
       position: fixed;
       width: 85px;
@@ -192,7 +193,7 @@
       100% { transform: translateY(0px) rotate(0deg); }
     }
 
-    /* 📱 ADAPTADO A CELULAR */
+    /* Adaptado a celular */
     @media (max-width: 800px){
 
       .card{
@@ -208,6 +209,26 @@
       h2{ font-size:34px; }
       .name{ font-size:70px; }
 
+      p.lead{ font-size:17px; }
+
+      .date{ font-size:16px; }
+
+      .info{ font-size:17px; }
+
+      .parents, .padrinos{
+        font-size:28px;
+      }
+
+      .btn{
+        font-size:17px;
+        padding:10px 16px;
+      }
+
+      .ornament .circle{
+        width:160px;
+        height:160px;
+      }
+
       .butterfly{
         width:65px;
       }
@@ -216,11 +237,11 @@
   </style>
 </head>
 
-<!-- 🦋 Mariposas en los bordes (no cubren texto) -->
-<img src="1.png" class="butterfly" style="top: 20px; left: 0px; animation-delay: 0s;">
-<img src="4.png" class="butterfly" style="bottom: 20px; left: 0px; width: 95px; animation-delay: 2s;">
-<img src="4.png" class="butterfly" style="top: 40px; right: 0px; width: 90px; animation-delay: 4s;">
-<img src="1.png" class="butterfly" style="bottom: 40px; right: 0px; width: 100px; animation-delay: 6s;">
+<!-- Mariposas -->
+<img src="1.png" class="butterfly" style="top: 40px; left: 20px; animation-delay: 0s;">
+<img src="4.png" class="butterfly" style="top: 120px; right: 40px; width: 110px; animation-delay: 2s;">
+<img src="4.png" class="butterfly" style="bottom: 60px; left: 120px; width: 80px; animation-delay: 4s;">
+<img src="1.png" class="butterfly" style="bottom: 160px; right: 100px; width: 100px; animation-delay: 6s;">
 
 <body>
   <div class="card" role="main">
